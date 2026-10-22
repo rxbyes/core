@@ -383,7 +383,7 @@ int main(int argc, char** argv)
 	if (EncryptRecord.Type == rtEncrypt)
 	{
 		ECMACryptFile file;
-		bool result = file.EncryptOfficeFile(file_path, file_path, file_password, L"ONLYOFFICE CryptoEngine (Version 1)\n\n");
+		bool result = file.EncryptOfficeFile(file_path, file_path, file_password, L"OA Docs CryptoEngine (Version 1)\n\n");
 		if (!result)
 		{
 			std::cout << "error: file is not encrypted" << std::endl;
