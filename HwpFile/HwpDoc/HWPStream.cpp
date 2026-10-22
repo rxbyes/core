@@ -241,14 +241,14 @@ HWP_BYTE CHWPStream::ReadByte()
 
 void Trim(HWP_STRING& sValue)
 {
-	HWP_STRING::const_iterator itBegin = std::find_if(sValue.cbegin(), sValue.cend(), [](wchar_t wChar){ return !iswcntrl(wChar); });
+	HWP_STRING::iterator itBegin = std::find_if(sValue.begin(), sValue.end(), [](wchar_t wChar){ return !iswcntrl(wChar); });
 
-	if (itBegin != sValue.cend())
-		sValue.erase(0, itBegin - sValue.cbegin());
+	if (itBegin != sValue.end())
+		sValue.erase(0, itBegin - sValue.begin());
 
-	HWP_STRING::const_reverse_iterator itEnd = std::find_if(sValue.crbegin(), sValue.crend(), [](wchar_t wChar){ return !iswcntrl(wChar); });
+	HWP_STRING::reverse_iterator itEnd = std::find_if(sValue.rbegin(), sValue.rend(), [](wchar_t wChar){ return !iswcntrl(wChar); });
 
-	if (itEnd != sValue.crbegin())
+	if (itEnd != sValue.rbegin())
 		sValue.erase(itEnd.base());
 }
 
