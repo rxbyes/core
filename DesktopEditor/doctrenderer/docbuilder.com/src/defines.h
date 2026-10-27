@@ -54,16 +54,16 @@
 
 
 #define C_DOCBUILDER_VALUE_HEADER \
-[coclass, uuid("85C41585-25D7-40F1-9CC6-FA17052650F4"), threading(apartment), vi_progid("ONLYOFFICE.BuilderValue"), progid("ONLYOFFICE.BuilderValue.1"), version(1.0)]
+[coclass, uuid("85C41585-25D7-40F1-9CC6-FA17052650F4"), threading(apartment), vi_progid("OA Docs.BuilderValue"), progid("OA Docs.BuilderValue.1"), version(1.0)]
 
 #define C_DOCBUILDER_CONTEXT_SCOPE_HEADER \
-[coclass, uuid("c54e2b15-ff5b-45a2-aa15-89a02605c30c"), threading(apartment), vi_progid("ONLYOFFICE.BuilderContextScope"), progid("ONLYOFFICE.BuilderContextScope.1"), version(1.0)]
+[coclass, uuid("c54e2b15-ff5b-45a2-aa15-89a02605c30c"), threading(apartment), vi_progid("OA Docs.BuilderContextScope"), progid("OA Docs.BuilderContextScope.1"), version(1.0)]
 
 #define C_DOCBUILDER_CONTEXT_HEADER \
-[coclass, uuid("299250bb-16c2-4ab4-8a49-a0c350d66bb5"), threading(apartment), vi_progid("ONLYOFFICE.BuilderContext"), progid("ONLYOFFICE.BuilderContext.1"), version(1.0)]
+[coclass, uuid("299250bb-16c2-4ab4-8a49-a0c350d66bb5"), threading(apartment), vi_progid("OA Docs.BuilderContext"), progid("OA Docs.BuilderContext.1"), version(1.0)]
 
 #define C_DOCBUILDER_HEADER \
-[coclass, uuid("9BF69F3C-1506-41B9-B8EE-2839948C02E9"), threading(apartment), vi_progid("ONLYOFFICE.Builder"), progid("ONLYOFFICE.Builder.1"), version(1.0)]
+[coclass, uuid("9BF69F3C-1506-41B9-B8EE-2839948C02E9"), threading(apartment), vi_progid("OA Docs.Builder"), progid("OA Docs.Builder.1"), version(1.0)]
 
 #define I_DOCBUILDER_VALUE IONLYOFFICEDocBuilderValue
 #define I_DOCBUILDER_CONTEXT_SCOPE IONLYOFFICEDocBuilderContextScope

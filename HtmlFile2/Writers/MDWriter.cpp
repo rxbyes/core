@@ -411,16 +411,16 @@ static inline void ReplaceSpaces(std::wstring& wsValue)
 	// boost::wregex oRegex(L"\\s+");
 	// wsValue = boost::regex_replace(wsValue, oRegex, L" ");
 
-	std::wstring::const_iterator itBegin = std::find_if(wsValue.cbegin(), wsValue.cend(), IsHtmlSpace);
-	std::wstring::const_iterator itEnd;
+	std::wstring::iterator itBegin = std::find_if(wsValue.begin(), wsValue.end(), IsHtmlSpace);
+	std::wstring::iterator itEnd;
 
-	while (wsValue.cend() != itBegin)
+	while (wsValue.end() != itBegin)
 	{
-		itEnd = std::find_if_not(itBegin, wsValue.cend(), IsHtmlSpace);
+		itEnd = std::find_if_not(itBegin, wsValue.end(), IsHtmlSpace);
 
 		wsValue.replace(itBegin, itEnd, L" ");
 
-		itBegin = std::find_if(itBegin + 1, wsValue.cend(), IsHtmlSpace);
+		itBegin = std::find_if(itBegin + 1, wsValue.end(), IsHtmlSpace);
 	}
 }
 

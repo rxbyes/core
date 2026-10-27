@@ -79,7 +79,7 @@ void CProcessEditor::StartEditor()
 
     HKEY hKey = 0;
     HKEY hRoot = HKEY_LOCAL_MACHINE;
-    if (ERROR_SUCCESS == RegOpenKeyExW(hRoot, L"SOFTWARE\\ONLYOFFICE\\DesktopEditors", 0, KEY_READ, &hKey))
+    if (ERROR_SUCCESS == RegOpenKeyExW(hRoot, L"SOFTWARE\\OA Docs\\DesktopEditors", 0, KEY_READ, &hKey))
     {
         if (ERROR_SUCCESS == RegQueryValueExW(hKey, L"AppPath", 0, NULL, (LPBYTE)sBuffer, &dwBufferSize))
         {

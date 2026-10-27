@@ -364,10 +364,10 @@ bool CImageOOXMLTag::Open(const std::vector<NSCSS::CNode>& arSelectors)
 		wsExtention = NSFile::GetFileExtention(wsSrc);
 		std::transform(wsExtention.begin(), wsExtention.end(), wsExtention.begin(), tolower);
 
-		std::wstring::const_iterator itFound = std::find_if(wsExtention.cbegin(), wsExtention.cend(), [](wchar_t wChar){ return !iswalpha(wChar) && L'+' != wChar; });
+		std::wstring::iterator itFound = std::find_if(wsExtention.begin(), wsExtention.end(), [](wchar_t wChar){ return !iswalpha(wChar) && L'+' != wChar; });
 
-		if (wsExtention.cend() != itFound)
-			wsExtention.erase(itFound, wsExtention.cend());
+		if (wsExtention.end() != itFound)
+			wsExtention.erase(itFound, wsExtention.end());
 	}
 
 	const std::wstring wsBasePath{m_pWriter->GetBasePath()};
@@ -1131,10 +1131,10 @@ bool WriteBackgroundImage(COOXMLWriter* pWriter, const std::vector<NSCSS::CNode>
 	std::wstring wsExtention{NSFile::GetFileExtention(wsSrc)};
 	std::transform(wsExtention.begin(), wsExtention.end(), wsExtention.begin(), tolower);
 
-	std::wstring::const_iterator itFound{std::find_if(wsExtention.cbegin(), wsExtention.cend(), [](wchar_t wChar){ return !iswalpha(wChar) && L'+' != wChar; })};
+	std::wstring::iterator itFound{std::find_if(wsExtention.begin(), wsExtention.end(), [](wchar_t wChar){ return !iswalpha(wChar) && L'+' != wChar; })};
 
-	if (wsExtention.cend() != itFound)
-		wsExtention.erase(itFound, wsExtention.cend());
+	if (wsExtention.end() != itFound)
+		wsExtention.erase(itFound, wsExtention.end());
 
 	if (NotValidExtension(wsExtention) || IsSVG(wsExtention) || IsMetafile(wsExtention))
 		return false;

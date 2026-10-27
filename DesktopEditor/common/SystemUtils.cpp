@@ -179,7 +179,7 @@ namespace NSSystemUtils
 
 	std::wstring GetBuildBranding()
 	{
-		std::string sBrandingA = "ONLYOFFICE";
+		std::string sBrandingA = "OA Docs";
 #ifdef BUILD_BRANDING_NAME
 		sBrandingA = BUILD_BRANDING_NAME;
 #endif

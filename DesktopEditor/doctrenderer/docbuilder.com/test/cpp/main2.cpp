@@ -119,8 +119,8 @@ int main(int argc, char *argv[])
 
 				// get comment id. 
 				// work with comment: 
-				// https://api.onlyoffice.com/docbuilder/textdocumentapi/apidocument/getcommentbyid
-				// https://api.onlyoffice.com/docbuilder/textdocumentapi/apicomment
+				// https://github.com/rxbyes/DocumentServer
+				// https://github.com/rxbyes/DocumentServer
 
 				BSTR bsCommentId = NULL;
 				pCommentID->ToString(&bsCommentId);

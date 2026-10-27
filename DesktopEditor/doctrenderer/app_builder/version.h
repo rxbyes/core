@@ -50,12 +50,12 @@
 #define VER_COMPANYDOMAIN_STR       "www.onlyoffice.com\0"
 #define ABOUT_COPYRIGHT_STR         VER_LEGALCOPYRIGHT_STR
 
-#define VER_FILEDESCRIPTION_STR     "ONLYOFFICE Document Builder\0"
+#define VER_FILEDESCRIPTION_STR     "OA Docs Document Builder\0"
 #define VER_INTERNALNAME_STR        "Document Builder\0"
 #define VER_LEGALTRADEMARKS1_STR    "All Rights Reserved\0"
 #define VER_LEGALTRADEMARKS2_STR    VER_LEGALTRADEMARKS1_STR
 #define VER_ORIGINALFILENAME_STR    "docbuilder.exe\0"
-#define VER_PRODUCTNAME_STR         "ONLYOFFICE Document Builder\0"
+#define VER_PRODUCTNAME_STR         "OA Docs Document Builder\0"
 
 #endif
 

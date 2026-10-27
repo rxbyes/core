@@ -1601,16 +1601,16 @@ inline void ReplaceSpaces(std::wstring& wsValue)
 	// boost::wregex oRegex(L"\\s+");
 	// wsValue = boost::regex_replace(wsValue, oRegex, L" ");
 
-	std::wstring::const_iterator itBegin = std::find_if(wsValue.cbegin(), wsValue.cend(), [](wchar_t wchValue){ return std::iswspace(wchValue) && 0xa0 != wchValue; });
-	std::wstring::const_iterator itEnd;
+	std::wstring::iterator itBegin = std::find_if(wsValue.begin(), wsValue.end(), [](wchar_t wchValue){ return std::iswspace(wchValue) && 0xa0 != wchValue; });
+	std::wstring::iterator itEnd;
 
-	while (wsValue.cend() != itBegin)
+	while (wsValue.end() != itBegin)
 	{
-		itEnd = std::find_if(itBegin, wsValue.cend(), [](wchar_t wchValue){ return !std::iswspace(wchValue) || 0xa0 == wchValue; });
+		itEnd = std::find_if(itBegin, wsValue.end(), [](wchar_t wchValue){ return !std::iswspace(wchValue) || 0xa0 == wchValue; });
 
 		wsValue.replace(itBegin, itEnd, L" ");
 
-		itBegin = std::find_if(itBegin + 1, wsValue.cend(), [](wchar_t wchValue){ return std::iswspace(wchValue) && 0xa0 != wchValue; });
+		itBegin = std::find_if(itBegin + 1, wsValue.end(), [](wchar_t wchValue){ return std::iswspace(wchValue) && 0xa0 != wchValue; });
 	}
 }
 }
